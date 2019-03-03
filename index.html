@@ -16,17 +16,17 @@
 
     <header>
         <nav>
-            <a href="#">Gmail</a>  
-            <a href="#">Grafika</a>
-            <a href="#"><i class="fa fa-th fa-lg" aria-hidden="true"></i></a>
-            <a class="login" href="#">Zaloguj się</a>
+            <a href="https://mail.google.com/mail/?tab=wm">Gmail</a>  
+            <a href="https://www.google.pl/imghp?hl=pl&tab=wi">Grafika</a>
+            <a href="https://www.google.pl/intl/uk/about/products?tab=wh"><i class="fa fa-th fa-lg" aria-hidden="true"></i></a>
+            <a class="login" href="https://accounts.google.com/ServiceLogin?hl=uk&passive=true&continue=https://www.google.com.ua/">Zaloguj się</a>
         </nav>
     </header>
     <main>
         <div class="GoogleLogo"></div>
 
         <div class="searchBar">
-            <input class="searchInput" type="text" name="search">
+            <input class="searchInput" type="text" id="query" name="search">
             <div class="KeyBoardInput"> <i class="fa fa-keyboard " aria-hidden="true"></i>
                 <div class="help">
                     <div class="helpKeyTringl"></div>
@@ -38,7 +38,7 @@
 
 
         <div class="searchButtons">
-            <a class="button" href="#">Szukaj w Google</a>
+            <a class="button" id="btn" href="#">Szukaj w Google</a>
             <a class="button" href="#">Szczęśliwy traf</a>
         </div>
 
@@ -46,7 +46,7 @@
     </main>
 
     <footer>
-        <div class="footerPos">
+            
             <p>Polska</p>
             <div class="footerLink">
                 <a href="#">Reklamuj się</a>
@@ -57,10 +57,17 @@
                 <a href="#">Warunki</a>
                 <a href="#">Ustawienia</a>
             </div>
-        </div>
+        
 
     </footer>
-
+<script>
+    document.getElementById("btn").addEventListener("click", search);
+    function search(){
+        
+        var query = document.getElementById("query").value;
+        if (query) location.href = 'https://www.google.pl/search?q='+query;
+    }
+</script>
 </body>
 
 </html>
