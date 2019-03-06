@@ -16,23 +16,27 @@
 
     <header>
         <nav>
-            <a href="https://mail.google.com/mail/?tab=wm">Gmail</a>  
+            <a href="https://mail.google.com/mail/?tab=wm">Gmail</a>
             <a href="https://www.google.pl/imghp?hl=pl&tab=wi">Grafika</a>
             <a href="https://www.google.pl/intl/uk/about/products?tab=wh"><i class="fa fa-th fa-lg" aria-hidden="true"></i></a>
-            <a class="login" href="https://accounts.google.com/ServiceLogin?hl=uk&passive=true&continue=https://www.google.com.ua/">Zaloguj się</a>
+            <a class="login" href="https://accounts.google.com/ServiceLogin?hl=uk&passive=true&continue=https://www.google.com.ua/">Zaloguj
+                się</a>
         </nav>
     </header>
     <main>
         <div class="GoogleLogo"></div>
 
         <div class="searchBar">
+            <div class="KeyBoardInput"> <i class="fa fa-search search-icon icon" aria-hidden="true"></i></div>
             <input class="searchInput" type="text" id="query" name="search">
-            <div class="KeyBoardInput"> <i class="fa fa-keyboard " aria-hidden="true"></i>
+            <div class="KeyBoardInput show"> <i class="fa fa-keyboard icon" aria-hidden="true"></i>
+
                 <div class="help">
                     <div class="helpKeyTringl"></div>
                     <div class="helpKey">Narzędzia do wprowadzania tekstu</div>
                 </div>
             </div>
+            <div class="KeyBoardInput"> <i class="fa fa-microphone icon" aria-hidden="true"></i></div>
         </div>
 
 
@@ -46,28 +50,29 @@
     </main>
 
     <footer>
-            
-            <p>Polska</p>
-            <div class="footerLink">
-                <a href="#">Reklamuj się</a>
-                <a href="#">Dla firm</a>
-                <a href="#">O nas</a>
-                <span class="childLink"></span>
-                <a href="#">Prywatność</a>
-                <a href="#">Warunki</a>
-                <a href="#">Ustawienia</a>
-            </div>
-        
+
+        <p>Polska</p>
+        <div class="footerLink">
+            <a href="#">Reklamuj się</a>
+            <a href="#">Dla firm</a>
+            <a href="#">O nas</a>
+            <span class="childLink"></span>
+            <a href="#">Prywatność</a>
+            <a href="#">Warunki</a>
+            <a href="#">Ustawienia</a>
+        </div>
+
 
     </footer>
-<script>
-    document.getElementById("btn").addEventListener("click", search);
-    function search(){
-        
-        var query = document.getElementById("query").value;
-        if (query) location.href = 'https://www.google.pl/search?q='+query;
-    }
-</script>
+    <script>
+        document.getElementById("btn").addEventListener("click", search);
+
+        function search() {
+
+            var query = document.getElementById("query").value;
+            if (query) location.href = 'https://www.google.pl/search?q=' + query;
+        }
+    </script>
 </body>
 
 </html>
