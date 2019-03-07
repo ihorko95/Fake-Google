@@ -2,9 +2,12 @@
 <html lang="pl">
 
 <head>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +16,13 @@
 </head>
 
 <body>
-
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <header>
         <nav>
             <a href="https://mail.google.com/mail/?tab=wm">Gmail</a>
             <a href="https://www.google.pl/imghp?hl=pl&tab=wi">Grafika</a>
             <a href="https://www.google.pl/intl/uk/about/products?tab=wh"><i class="fa fa-th fa-lg" aria-hidden="true"></i></a>
-            <a class="login" href="https://accounts.google.com/ServiceLogin?hl=uk&passive=true&continue=https://www.google.com.ua/">Zaloguj
+            <a class="login mdc-ripple-surface foo-button " href="https://accounts.google.com/ServiceLogin?hl=uk&passive=true&continue=https://www.google.com.ua/">Zaloguj
                 się</a>
         </nav>
     </header>
@@ -42,11 +45,11 @@
 
 
         <div class="searchButtons">
-            <a class="button" id="btn" href="#">Szukaj w Google</a>
-            <a class="button" href="#">Szczęśliwy traf</a>
+            <a class="mdc-ripple-surface foo-button  button" id="btn" href="#">Szukaj w Google</a>
+            <a class="mdc-ripple-surface foo-button  button" href="#">Szczęśliwy traf</a>
         </div>
 
-
+      
     </main>
 
     <footer>
@@ -73,6 +76,13 @@
             if (query) location.href = 'https://www.google.pl/search?q=' + query;
         }
     </script>
+    <script>
+        const buttons = document.querySelectorAll('.foo-button');
+        for (const button of buttons) {
+            mdc.ripple.MDCRipple.attachTo(button);
+        }
+    </script>
+
 </body>
 
 </html>
