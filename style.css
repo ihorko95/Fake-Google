@@ -77,7 +77,7 @@ main{
     top:28px;
     max-width: 90%;
     width:550px;
-    height: 23px;
+    
     border: 1px solid rgba(0, 0, 0, 0.2); 
     border-radius: 20px;
     outline: none;
@@ -93,6 +93,7 @@ main{
     border: none; 
     outline: none;
     width: 88%;
+    font-size: 12px;
 }
 .KeyBoardInput{
     color: #757575;
@@ -204,75 +205,35 @@ footer p{
     flex-grow: 1;
 }
 
+.autocompleter{
+    font-size: 12px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.autocomplete {
-    position: relative;
-    top: -80px;
- 
-    
-  }
-  .autocomplete label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    font-weight: 100;
-  }
-  .autocomplete-input {
-    padding: 7px 10px;
-    width: 93%;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    outline: none;
-  }
-  .autocomplete-input:focus {
-    border-color: #000;
-  }
-  .autocomplete-list {
+}
+table {
+    border-radius: 0  0  10px 10px;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    padding: 5px;
     position: absolute;
-    width: 100%;
-    font-size: 14px;
-    z-index: 2;
-    overflow: auto;
-    min-width: 250px;
-    max-height: 150px;
-    margin: 0;
-    margin-top: 5px;
-    padding: 0;
-    border: 1px solid #eee;
-    list-style: none;
-    border-radius: 4px;
     background-color: #fff;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-  }
-  .autocomplete-list li {
+    left: 30px;
+    top: 35px;
+    width:85%;
+    z-index: 1;
+}
+
+input {
+   
+    border: none;
     margin: 0;
-    padding: 8px 15px;
-    border-bottom: 1px solid #f5f5f5;
-  }
-  .autocomplete-list li:last-child {
-    border-bottom: 0;
-  }
-  .autocomplete-list li:hover, .autocomplete-list li.active {
-    background-color: #f5f5f5;
-  }
-  
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    font: 16px arial,sans-serif;
 
-
-#app{
-    width: 100%;
+    vertical-align: middle;
+    text-align: left;
+    width: 80%;
 }

@@ -7,40 +7,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+ 
 
    
-    <script type="text/javascript"  src="animals.js" ></script>
+ 
     <title>Google</title>
 </head>
 
 <body>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script type="text/x-template" id="autocomplete-tpl">
-        <div class="autocomplete">
-          <label :for="id">{{label}}</label>
-          <textarea v-if="textarea" :id="id" :rows="rows" :cols="cols" class="searchInput" :placeholder="placeholder" @focusout="focusout" @focus="focus" @keydown.13="chooseItem" @keydown.tab="chooseItem" @keydown.40="moveDown" @keydown.38="moveUp" v-model="inputValue"
-            type="text"></textarea>
-          <input v-else :id="id" class="searchInput" :placeholder="placeholder" @focusout="focusout" @focus="focus" @keydown.13="chooseItem" @keydown.tab="chooseItem" @keydown.40="moveDown" @keydown.38="moveUp" v-model="inputValue" type="text">
-    
-    
-          <ul :class="{
-            'autocomplete-list': true,
-            [id+'-list']: true
-          }" v-if="searchMatch.length > 0">
-            <li :class="{active: selectedIndex === index}" v-for="(result, index) in searchMatch" @click="selectItem(index), chooseItem()" v-html="highlightWord(result)">
-    
-            </li>
-          </ul>
-        </div>
-    </script>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
 
     <header>
         <nav>
@@ -57,13 +41,8 @@
         <div class="searchBar">
             <div class="KeyBoardInput"> <i class="fa fa-search search-icon icon" aria-hidden="true"></i></div>
             <!--<input class="searchInput" type="text" id="query" name="search">-->
-            <div id="app">
-   
-        
-                    <autocomplete />
-                   
-                </div>
-
+            <input class="searchInput"  v-model="inputContent"/>
+            <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
 
             <div class="KeyBoardInput show"> <i class="fa fa-keyboard icon" aria-hidden="true"></i>
 
@@ -78,19 +57,18 @@
 
 
         <div class="searchButtons">
-            <a class="mdc-ripple-surface foo-button  button" id="btn" href="#">Szukaj w Google</a>
-            <a class="mdc-ripple-surface foo-button  button" href="#">Szczęśliwy traf</a>
+            <a class="mdc-ripple-surface foo-button  button" v-if="!inputContent" id="btn" href="#">Szukaj w Google</a>
+            <a class="mdc-ripple-surface foo-button  button" v-if="!inputContent" href="#">Szczęśliwy traf</a>
         </div>
 
       
     </main>
 
-
-      <script type="text/javascript"  src="vue.js"></script>
-
+   
 
 
 
+      
 
     <footer>
 
@@ -107,9 +85,20 @@
 
 
     </footer>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript"  src="animals.js" ></script>
+    <script src="vue.js"></script>
+
+
     <script>
         document.getElementById("btn").addEventListener("click", search);
 
+        var elems = document.querySelectorAll(".application--wrap");
+
+[].forEach.call(elems, function(el) {
+    el.classList.remove("application--wrap");
+});
         function search() {
 
             var query = document.getElementById("query").value;
