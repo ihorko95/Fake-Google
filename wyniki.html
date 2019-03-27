@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="png">
+    <title>Wyniki</title>
+</head>
+<body class="win2">
+    <div class="win">
+    <div class="div1 smallGoogleLogo"></div>
+    <div class="div2">
+            <div class="searchBar">
+                    <div class="KeyBoardInput"> <i class="fa fa-search search-icon icon" aria-hidden="true"></i></div>
+                    <!--<input class="searchInput" type="text" id="query" name="search">-->
+                    <input class="searchInput"  v-model="inputContent"/>
+                    <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
+        
+                    <div class="KeyBoardInput show"> <i class="fa fa-keyboard icon" aria-hidden="true"></i>
+        
+                        <div class="help">
+                            <div class="helpKeyTringl"></div>
+                            <div class="helpKey">Narzędzia do wprowadzania tekstu</div>
+                        </div>
+                    </div>
+                    <div class="KeyBoardInput"> <i class="fa fa-microphone icon" aria-hidden="true"></i></div>
+                </div>
+
+
+    </div>
+    <div class="div3">
+            <nav>
+
+                    <a href="https://www.google.pl/intl/uk/about/products?tab=wh"><i class="fa fa-th fa-lg" aria-hidden="true"></i></a>
+                    <a class="login mdc-ripple-surface foo-button " href="https://accounts.google.com/ServiceLogin?hl=uk&passive=true&continue=https://www.google.com.ua/">Zaloguj
+                        się</a>
+                </nav>
+
+    </div>
+
+</div>
+
+<div class="div4">
+        <nav>
+                <a class="active" href="#">Wszystko</a>
+                <a href="#">Grafika</a>
+                <a href="#">Filmy</a>
+                <a href="#">Zakupy</a>
+                <a href="#">Wiadomości</a>
+                <a href="#">Więcej</a>
+                <a href="#">Ustawienia</a>
+                <a href="#">Narzędzia</a>
+        </nav>
+    <div class="count">
+            Około 11 400 000 wyników (0,30 s) 
+    </div>
+    <div class="link">
+        <div class="topik">
+               <a href="#"> Moduł WiFi ESP8266 + NodeMCU v3 - Sklep dla robotyków - Botland</a> 
+        </div>
+        <div class="href_link">
+                <a href="#">  https://botland.com.pl › ELEKTRONIKA › Komunikacja › Moduły WiFi</a> 
+        </div>
+        <div class="description">
+                Moduł WiFi ESP8266 + NodeMCU v3, Opis. Moduł WiFi oparty na układzie ESP8266. Posiada wgrane oprogramowanie NodeMCU, który umożliwia.
+        </div>
+    </div>
+    <div class="link">
+            <div class="topik">
+                   <a href="#"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</a> 
+            </div>
+            <div class="href_link">
+                    <a href="#">  https://botland.com.pl › ELEKTRONIKA › Komunikacja › Moduły WiFi</a> 
+            </div>
+            <div class="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae perferendis ab laudantium dolores perspiciatis quos eveniet enim, officia qui obcaecati officiis quisquam natus necessitatibus debitis ut reprehenderit rerum atque harum.
+            </div>
+        </div>
+        <div class="link">
+                <div class="topik">
+                       <a href="#"> Moduł WiFi ESP8266 + NodeMCU v3 - Sklep dla robotyków - Botland</a> 
+                </div>
+                <div class="href_link">
+                        <a href="#">  https://botland.com.pl › ELEKTRONIKA › Komunikacja › Moduły WiFi</a> 
+                </div>
+                <div class="description">
+                        Moduł WiFi ESP8266 + NodeMCU v3, Opis. Moduł WiFi oparty na układzie ESP8266. Posiada wgrane oprogramowanie NodeMCU, który umożliwia.
+                </div>
+            </div>
+            <div class="link">
+                    <div class="topik">
+                           <a href="#"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</a> 
+                    </div>
+                    <div class="href_link">
+                            <a href="#">  https://botland.com.pl › ELEKTRONIKA › Komunikacja › Moduły WiFi</a> 
+                    </div>
+                    <div class="description">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae perferendis ab laudantium dolores perspiciatis quos eveniet enim, officia qui obcaecati officiis quisquam natus necessitatibus debitis ut reprehenderit rerum atque harum.
+                    </div>
+                </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript"  src="animals.js" ></script>
+    <script src="vue.js"></script>
+
+</body>
+</html>
