@@ -27,3 +27,4 @@ Vue.component('v-autocompleter', {
 					}
 			}
 	})
+	

@@ -44,21 +44,19 @@
     </div>
 
 </div>
-
-<div class="div4">
+<hr>
+<div id="app" class="div4">
         <nav>
-                <a class="active" href="#">Wszystko</a>
-                <a href="#">Grafika</a>
-                <a href="#">Filmy</a>
-                <a href="#">Zakupy</a>
-                <a href="#">Wiadomości</a>
-                <a href="#">Więcej</a>
-                <a href="#">Ustawienia</a>
-                <a href="#">Narzędzia</a>
+                <a v-for="page in pages" :class="[curentPage == page ? 'active': 'none']" @click="myfunc(page)">{{page}}</a>
+                
+
         </nav>
+   
     <div class="count">
             Około 11 400 000 wyników (0,30 s) 
     </div>
+    <template v-if='curentPage != "Wszystko"'><h1>To jest {{curentPage}}</h1></template> 
+    <template v-else>
     <div class="link">
         <div class="topik">
                <a href="#"> Moduł WiFi ESP8266 + NodeMCU v3 - Sklep dla robotyków - Botland</a> 
@@ -103,11 +101,20 @@
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae perferendis ab laudantium dolores perspiciatis quos eveniet enim, officia qui obcaecati officiis quisquam natus necessitatibus debitis ut reprehenderit rerum atque harum.
                     </div>
                 </div>
+        </template>
+        
+              
 </div>
+
+
+       
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript"  src="animals.js" ></script>
     <script src="vue.js"></script>
+    <script src="wyniki.js"></script>
 
 </body>
 </html>
