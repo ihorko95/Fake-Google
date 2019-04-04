@@ -262,6 +262,7 @@ input {
 .smallGoogleLogo{
     width: 80%;
     height: 100px;
+    margin-top: 5px;
    
     background: url("googlelogo.png") 30% 30% / contain no-repeat;
     
